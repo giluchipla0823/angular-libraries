@@ -41,7 +41,9 @@ export class AppModule { }
 ## Uso
 * Con buscador
 
+```
 <guw-search-user></guw-search-user>
+```
 
 * Sin buscador
 ```
