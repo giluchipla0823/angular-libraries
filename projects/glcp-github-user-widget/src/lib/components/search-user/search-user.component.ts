@@ -19,15 +19,10 @@ export class SearchUserComponent implements OnInit {
   }
 
   search(key: any) {
-    console.log({ key });
-
     this.searching = false;
 
     if (key.keyCode === 13) {
       this.searching = true;
-
-      console.log('search', { search: this.searchText.value });
     }
   }
-
 }
