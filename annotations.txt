@@ -1,0 +1,49 @@
+# Crear librería github widget user
+
+ng generate library github-user-widget --prefix=guw
+
+# Instalar librería de api de github
+npm install proyecto-1b-api-github
+
+IMPORTANTE:
+Las librerías externas se instalan en la raíz del proyecto y después de instalar,
+debemos ir al package.json de la raíz, tomar la referencia de la librería instalada; y 
+finalmente agregarla en el package.json del proyecto "librería".
+
+Además de ello es importante agregar lo siguiente en el fichero "ng-package.json"
+
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/github-user-widget",
+  "lib": {
+    "entryFile": "src/public-api.ts",
+
+    /* Agregar  */
+    "umdModuleIds": {
+      "proyecto-1b-api-github": "^1.1.0"
+    }
+  }
+}
+
+# Crear componentes en la librería:
+Navegar hasta el directorio "projects/github-user-widget/src/lib"
+
+
+# SOLUCIONAR PROBLEMA CUANDO UNA LIBRERÍA NO TIENE EL TYPING
+
+Puedes crear un directorio @types y dentro de ello crear un directorio con el nombre de la librería y finalmente crear un fichero "index.d.ts",
+por ejemplo
+
+@types
+  |- proyecto-1b-api-github
+     |- index.d.ts
+
+En el fichero "index.d.ts", se deberá agregar la siguiente línea:
+declare module 'proyecto-1b-api-github';
+
+Finalmente en el fichero "tsconfig.app.json", debes añadir la siguiente configuración:
+
+"include": [
+    "src/**/*.d.ts",
+    "@types/**/*.d.ts"
+]

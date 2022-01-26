@@ -1,0 +1,30 @@
+<div class="github-card user-card" *ngIf="user">
+    <div class="header user"></div>
+    <a [href]="'https://github.com/' + user?.login" class="avatar">
+        <img [src]="user?.avatar_url + '&s=80'" alt="" />
+    </a>
+    <div class="content">
+        <ul class="status">
+            <li>
+                <a [href]="'https://github.com/' + user?.login">
+                    <strong>{{ user?.public_repos }}</strong> Repositorios
+                </a>
+            </li>
+            <li>
+                <a [href]="'https://github.com/' + user?.login + '/followers'">
+                    <strong>{{ user?.followers }}</strong> Seguidores
+                </a>
+            </li>
+            <li>
+                <a [href]="'https://github.com/' + user?.login + '/following'">
+                    <strong>{{ user?.following }}</strong> Siguiendo
+                </a>
+            </li>
+            <li>
+                <a [href]="'https://gist.github.com/' + user?.login">
+                    <strong>{{ user?.login }}</strong> Gists
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

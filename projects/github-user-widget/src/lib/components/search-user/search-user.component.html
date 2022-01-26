@@ -1,0 +1,3 @@
+<input type="text" (keydown)="search($event)" [formControl]="searchText" />
+
+<guw-user *ngIf="searching" [search]="searchText.value"></guw-user>

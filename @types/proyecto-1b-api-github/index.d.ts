@@ -1,0 +1,1 @@
+declare module 'proyecto-1b-api-github';

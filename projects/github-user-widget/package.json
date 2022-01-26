@@ -1,0 +1,12 @@
+{
+  "name": "github-user-widget",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0",
+    "proyecto-1b-api-github": "^1.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
