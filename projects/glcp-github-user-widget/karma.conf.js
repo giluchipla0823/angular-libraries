@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, '../../coverage/github-user-widget'),
+      dir: require('path').join(__dirname, '../../coverage/glcp-github-user-widget'),
       subdir: '.',
       reporters: [
         { type: 'html' },

@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build.github.lib": "ng build glcp-github-user-widget && cp -R ./projects/glcp-github-user-widget/src/lib/assets ./dist/glcp-github-user-widget/lib"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +19,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "glcp-github-user-widget": "0.0.1",
     "proyecto-1b-api-github": "^1.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",

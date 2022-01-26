@@ -6,12 +6,13 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
     "strict": true,
     "noImplicitReturns": true,
     "paths": {
-      "github-user-widget": [
-        "dist/github-user-widget/github-user-widget",
-        "dist/github-user-widget"
+      "glcp-github-user-widget": [
+        "dist/glcp-github-user-widget/glcp-github-user-widget",
+        "dist/glcp-github-user-widget"
       ]
     },
     "noFallthroughCasesInSwitch": true,

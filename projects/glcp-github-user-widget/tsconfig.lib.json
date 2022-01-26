@@ -6,6 +6,7 @@
     "target": "es2015",
     "declaration": true,
     "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
     "declarationMap": true,
     "inlineSources": true,
     "types": [],

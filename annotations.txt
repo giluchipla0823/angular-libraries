@@ -1,6 +1,6 @@
 # Crear librería github widget user
 
-ng generate library github-user-widget --prefix=guw
+ng generate library glcp-github-user-widget --prefix=guw
 
 # Instalar librería de api de github
 npm install proyecto-1b-api-github
@@ -14,7 +14,7 @@ Además de ello es importante agregar lo siguiente en el fichero "ng-package.jso
 
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/github-user-widget",
+  "dest": "../../dist/glcp-github-user-widget",
   "lib": {
     "entryFile": "src/public-api.ts",
 
@@ -26,7 +26,7 @@ Además de ello es importante agregar lo siguiente en el fichero "ng-package.jso
 }
 
 # Crear componentes en la librería:
-Navegar hasta el directorio "projects/github-user-widget/src/lib"
+Navegar hasta el directorio "projects/glcp-github-user-widget/src/lib"
 
 
 # SOLUCIONAR PROBLEMA CUANDO UNA LIBRERÍA NO TIENE EL TYPING
@@ -47,3 +47,41 @@ Finalmente en el fichero "tsconfig.app.json", debes añadir la siguiente configu
     "src/**/*.d.ts",
     "@types/**/*.d.ts"
 ]
+
+Una forma más simple sería simplemente agregar lo siguiente en los ficheros de configuracion tsconfig.json
+
+"compilerOptions": {
+  ...
+  "allowSyntheticDefaultImports": true,
+  "noImplicitAny": false,
+  ...
+}
+
+# Compilar antes de enviar a NPM
+
+- Crear script en package.json
+
+"scripts": {
+  ...
+  "build.github.lib": "ng build glcp-github-user-widget && cp -R ./projects/glcp-github-user-widget/src/lib/assets ./dist/glcp-github-user-widget/lib",
+  ...
+},
+
+- Ejecutar script para compilar librería
+
+npm run build.github.lib
+
+# Para publicar 
+- Acceder al directorio donde esta nuestra librería compilada: /dist/glcp-github-user-widget
+npm publish
+
+- En el caso de generar nueva versión debemos aplicar el versionado semántico manualmente o ejecutando el siguiente
+  comando: 
+
+  npm version patch
+
+  y finalmente:
+
+  npm publish
+
+https://raw.githubusercontent.com/npm-js-ts-angular-modules-course/proyecto-2c-crono/master/package.json

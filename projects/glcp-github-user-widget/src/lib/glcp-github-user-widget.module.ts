@@ -18,4 +18,4 @@ const COMPONENTS = [
   ],
   exports: COMPONENTS
 })
-export class GithubUserWidgetModule { }
+export class GlcpGithubUserWidgetModule { }

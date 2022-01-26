@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// import { GithubUserWidgetModule } from 'glcp-github-user-widget';
 
 import { AppComponent } from './app.component';
-import { GithubUserWidgetModule } from '../../projects/github-user-widget/src/lib/github-user-widget.module';
+import { GlcpGithubUserWidgetModule } from 'glcp-github-user-widget';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,7 @@ import { GithubUserWidgetModule } from '../../projects/github-user-widget/src/li
   ],
   imports: [
     BrowserModule,
-    GithubUserWidgetModule
+    GlcpGithubUserWidgetModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -109,23 +109,23 @@
         }
       }
     },
-    "github-user-widget": {
+    "glcp-github-user-widget": {
       "projectType": "library",
-      "root": "projects/github-user-widget",
-      "sourceRoot": "projects/github-user-widget/src",
+      "root": "projects/glcp-github-user-widget",
+      "sourceRoot": "projects/glcp-github-user-widget/src",
       "prefix": "guw",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/github-user-widget/ng-package.json"
+            "project": "projects/glcp-github-user-widget/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/github-user-widget/tsconfig.lib.prod.json"
+              "tsConfig": "projects/glcp-github-user-widget/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/github-user-widget/tsconfig.lib.json"
+              "tsConfig": "projects/glcp-github-user-widget/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -133,9 +133,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/github-user-widget/src/test.ts",
-            "tsConfig": "projects/github-user-widget/tsconfig.spec.json",
-            "karmaConfig": "projects/github-user-widget/karma.conf.js"
+            "main": "projects/glcp-github-user-widget/src/test.ts",
+            "tsConfig": "projects/glcp-github-user-widget/tsconfig.spec.json",
+            "karmaConfig": "projects/glcp-github-user-widget/karma.conf.js"
           }
         }
       }
